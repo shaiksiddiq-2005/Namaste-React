@@ -1,0 +1,31 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "Siddiq",
+    "React",
+    "shaik"
+  ],
+  "homepage": "https://github.com/shaiksiddiq-2005/Namaste-React#readme",
+  "bugs": {
+    "url": "https://github.com/shaiksiddiq-2005/Namaste-React/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaiksiddiq-2005/Namaste-React.git"
+  },
+  "license": "ISC",
+  "author": "Shaik Abubakar Siddiq",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  }
+}

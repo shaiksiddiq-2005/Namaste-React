@@ -35,3 +35,6 @@ const parent =React.createElement("div", {id: "parent"},
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 root.render(parent);
+
+
+console.log("Hello siddiq");

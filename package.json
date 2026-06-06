@@ -19,6 +19,8 @@
   "author": "Shaik Abubakar Siddiq",
   "type": "commonjs",
   "scripts": {
+    "start" : "parcel index.html",
+    "Build" : "parcel build index.html",
     "test": "jest"
   },
   "devDependencies": {

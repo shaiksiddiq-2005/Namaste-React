@@ -14,3 +14,6 @@
 - Code splitting
 - Tree shaking --> it Removes the unused code.
 - HTTPS --> it provides Https when we pass a command----> npx parcel index.html --https
+
+# Babel is compile of Javascript!-
+-  Babel converts the code into Reactcode, but the ReactCode is Javascript's Object 😁

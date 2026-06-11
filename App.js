@@ -178,11 +178,13 @@ const Body = () => {
 
             <div className="res-container">
 
-            {restaurants.map((restaurant) => (
+            {restaurants.map((restaurant, index) => (
 
-                <RestaurantCard data={restaurant}/>
-
+                <RestaurantCard 
+                key={restaurant.name} //key={index} // not using key(not Acceptable) <<<< using index as key  <<<< using unique id (Best pratice)
+                data={restaurant} />
             ))}
+
             </div>
         </div>
     );

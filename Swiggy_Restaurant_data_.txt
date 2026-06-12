@@ -1,0 +1,651 @@
+const restaurants =  [
+                  {
+                    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+                    "info": {
+                      "id": "618073",
+                      "name": "Barbeque Nation",
+                      "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2025/11/19/2635e6b9-7e32-494a-897b-2eb34e5a392f_8108a509-090c-476b-9137-4bdb320dc6a1.jpg",
+                      "locality": "Waltair Road",
+                      "areaName": "Waltair Uplands",
+                      "costForTwo": "₹600 for two",
+                      "cuisines": [
+                        "North Indian",
+                        "Barbecue",
+                        "Kebabs",
+                        "Biryani",
+                        "Street Food",
+                        "Snacks"
+                      ],
+                      "avgRating": 4,
+                      "parentId": "2438",
+                      "avgRatingString": "4.0",
+                      "totalRatingsString": "1.9K+",
+                      "sla": {
+                        "deliveryTime": 35,
+                        "lastMileTravel": 3,
+                        "serviceability": "SERVICEABLE",
+                        "slaString": "35-45 mins",
+                        "lastMileTravelString": "3.0 km",
+                        "iconType": "ICON_TYPE_EMPTY"
+                      },
+                      "availability": {
+                        "nextCloseTime": "2026-06-12 23:30:00",
+                        "opened": true
+                      },
+                      "badges": {
+
+                      },
+                      "isOpen": true,
+                      "type": "F",
+                      "badgesV2": {
+                        "entityBadges": {
+                          "imageBased": {
+
+                          },
+                          "textBased": {
+
+                          },
+                          "textExtendedBadges": {
+
+                          }
+                        }
+                      },
+                      "aggregatedDiscountInfoV3": {
+                        "header": "₹200 OFF",
+                        "subHeader": "ABOVE ₹799",
+                        "discountTag": "FLAT DEAL"
+                      },
+                      "orderabilityCommunication": {
+                        "title": {
+
+                        },
+                        "subTitle": {
+
+                        },
+                        "message": {
+
+                        },
+                        "customIcon": {
+
+                        }
+                      },
+                      "differentiatedUi": {
+                        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                        "differentiatedUiMediaDetails": {
+                          "maxDuration": "3000",
+                          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                          "lottie": {
+
+                          },
+                          "video": {
+
+                          }
+                        }
+                      },
+                      "reviewsSummary": {
+
+                      },
+                      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                      "restaurantOfferPresentationInfo": {
+
+                      },
+                      "externalRatings": {
+                        "aggregatedRating": {
+                          "rating": "--"
+                        }
+                      },
+                      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+                    },
+                    "analytics": {
+                      "context": "seo-data-d53f5c0a-8a66-4a5e-a5bc-a0d0dde6eabc"
+                    },
+                    "cta": {
+                      "link": "https://www.swiggy.com/city/vizag/barbeque-nation-waltair-road-waltair-uplands-rest618073",
+                      "text": "RESTAURANT_MENU",
+                      "type": "WEBLINK"
+                    },
+                    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_JHS_byName"
+                  },
+                  {
+                    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+                    "info": {
+                      "id": "1054261",
+                      "name": "Dabba & Co.",
+                      "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2025/5/30/169ffbc7-1893-417f-bde4-c2cef4405a71_92952729-6ebf-4adf-8b18-934406cdec28.jpeg",
+                      "locality": "laxmi nagar",
+                      "areaName": "Simhachalam",
+                      "costForTwo": "₹200 for two",
+                      "cuisines": [
+                        "Home food",
+                        "Indian",
+                        "Thalis"
+                      ],
+                      "avgRating": 4.1,
+                      "parentId": "612560",
+                      "avgRatingString": "4.1",
+                      "totalRatingsString": "303",
+                      "sla": {
+                        "deliveryTime": 36,
+                        "lastMileTravel": 9,
+                        "serviceability": "SERVICEABLE",
+                        "slaString": "35-40 mins",
+                        "lastMileTravelString": "9.0 km",
+                        "iconType": "ICON_TYPE_EMPTY"
+                      },
+                      "availability": {
+                        "nextCloseTime": "2026-06-12 23:59:00",
+                        "opened": true
+                      },
+                      "badges": {
+                        "imageBadges": [
+                          {
+                            "imageId": "Health%20Hub/RX%20BADGE/BADGE2.png",
+                            "description": "Meals with high protein, low calorie and no added sugar"
+                          }
+                        ]
+                      },
+                      "isOpen": true,
+                      "type": "F",
+                      "badgesV2": {
+                        "entityBadges": {
+                          "imageBased": {
+                            "badgeObject": [
+                              {
+                                "attributes": {
+                                  "description": "Meals with high protein, low calorie and no added sugar",
+                                  "imageId": "Health%20Hub/RX%20BADGE/BADGE2.png",
+                                  "theme": ""
+                                }
+                              }
+                            ]
+                          },
+                          "textBased": {
+
+                          },
+                          "textExtendedBadges": {
+
+                          }
+                        }
+                      },
+                      "aggregatedDiscountInfoV3": {
+                        "header": "₹200 OFF",
+                        "subHeader": "ABOVE ₹899",
+                        "discountTag": "FLAT DEAL"
+                      },
+                      "orderabilityCommunication": {
+                        "title": {
+
+                        },
+                        "subTitle": {
+
+                        },
+                        "message": {
+
+                        },
+                        "customIcon": {
+
+                        }
+                      },
+                      "differentiatedUi": {
+                        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                        "differentiatedUiMediaDetails": {
+                          "maxDuration": "3000",
+                          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                          "lottie": {
+
+                          },
+                          "video": {
+
+                          }
+                        }
+                      },
+                      "reviewsSummary": {
+
+                      },
+                      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                      "restaurantOfferPresentationInfo": {
+
+                      },
+                      "externalRatings": {
+                        "aggregatedRating": {
+                          "rating": "--"
+                        }
+                      },
+                      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+                    },
+                    "analytics": {
+                      "context": "seo-data-d53f5c0a-8a66-4a5e-a5bc-a0d0dde6eabc"
+                    },
+                    "cta": {
+                      "link": "https://www.swiggy.com/city/vizag/dabba-and-co-laxmi-nagar-simhachalam-rest1054261",
+                      "text": "RESTAURANT_MENU",
+                      "type": "WEBLINK"
+                    },
+                    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_JHS_byName"
+                  },
+                  {
+                    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+                    "info": {
+                      "id": "182954",
+                      "name": "New Satyam Stay Comfort",
+                      "cloudinaryImageId": "73e07d77b8d136c2f129988c1058808f",
+                      "locality": "Dwarka Nagar",
+                      "areaName": "Dwaraka Nagar",
+                      "costForTwo": "₹300 for two",
+                      "cuisines": [
+                        "Biryani",
+                        "Indian",
+                        "Chinese"
+                      ],
+                      "avgRating": 4.3,
+                      "parentId": "599643",
+                      "avgRatingString": "4.3",
+                      "totalRatingsString": "12K+",
+                      "sla": {
+                        "deliveryTime": 27,
+                        "lastMileTravel": 2.5,
+                        "serviceability": "SERVICEABLE",
+                        "slaString": "25-30 mins",
+                        "lastMileTravelString": "2.5 km",
+                        "iconType": "ICON_TYPE_EMPTY"
+                      },
+                      "availability": {
+                        "nextCloseTime": "2026-06-12 15:30:00",
+                        "opened": true
+                      },
+                      "badges": {
+
+                      },
+                      "isOpen": true,
+                      "type": "F",
+                      "badgesV2": {
+                        "entityBadges": {
+                          "imageBased": {
+
+                          },
+                          "textBased": {
+
+                          },
+                          "textExtendedBadges": {
+
+                          }
+                        }
+                      },
+                      "aggregatedDiscountInfoV3": {
+                        "header": "₹200 OFF",
+                        "subHeader": "ABOVE ₹499",
+                        "discountTag": "FLAT DEAL"
+                      },
+                      "orderabilityCommunication": {
+                        "title": {
+
+                        },
+                        "subTitle": {
+
+                        },
+                        "message": {
+
+                        },
+                        "customIcon": {
+
+                        }
+                      },
+                      "differentiatedUi": {
+                        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                        "differentiatedUiMediaDetails": {
+                          "maxDuration": "3000",
+                          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                          "lottie": {
+
+                          },
+                          "video": {
+
+                          }
+                        }
+                      },
+                      "reviewsSummary": {
+
+                      },
+                      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                      "restaurantOfferPresentationInfo": {
+
+                      },
+                      "externalRatings": {
+                        "aggregatedRating": {
+                          "rating": "4.0",
+                          "ratingCount": "3.3K+"
+                        },
+                        "source": "GOOGLE",
+                        "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+                      },
+                      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+                    },
+                    "analytics": {
+                      "context": "seo-data-d53f5c0a-8a66-4a5e-a5bc-a0d0dde6eabc"
+                    },
+                    "cta": {
+                      "link": "https://www.swiggy.com/city/vizag/new-satyam-stay-comfort-dwarka-nagar-dwaraka-nagar-rest182954",
+                      "text": "RESTAURANT_MENU",
+                      "type": "WEBLINK"
+                    },
+                    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_JHS_byName"
+                  },
+                  {
+                    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+                    "info": {
+                      "id": "70356",
+                      "name": "Bombay Restaurant-Dabagarden",
+                      "cloudinaryImageId": "xi8ofnm7zaqu0i0gib74",
+                      "locality": "Daba Gardens",
+                      "areaName": "Dabagarden",
+                      "costForTwo": "₹250 for two",
+                      "cuisines": [
+                        "Indian",
+                        "Chinese",
+                        "Tandoor",
+                        "Biryani"
+                      ],
+                      "avgRating": 4,
+                      "parentId": "12841",
+                      "avgRatingString": "4.0",
+                      "totalRatingsString": "31K+",
+                      "sla": {
+                        "deliveryTime": 30,
+                        "lastMileTravel": 2,
+                        "serviceability": "SERVICEABLE",
+                        "slaString": "30-40 mins",
+                        "lastMileTravelString": "2.0 km",
+                        "iconType": "ICON_TYPE_EMPTY"
+                      },
+                      "availability": {
+                        "nextCloseTime": "2026-06-12 23:30:00",
+                        "opened": true
+                      },
+                      "badges": {
+
+                      },
+                      "isOpen": true,
+                      "type": "F",
+                      "badgesV2": {
+                        "entityBadges": {
+                          "imageBased": {
+
+                          },
+                          "textBased": {
+
+                          },
+                          "textExtendedBadges": {
+
+                          }
+                        }
+                      },
+                      "aggregatedDiscountInfoV3": {
+                        "header": "₹200 OFF",
+                        "subHeader": "ABOVE ₹449",
+                        "discountTag": "FLAT DEAL"
+                      },
+                      "orderabilityCommunication": {
+                        "title": {
+
+                        },
+                        "subTitle": {
+
+                        },
+                        "message": {
+
+                        },
+                        "customIcon": {
+
+                        }
+                      },
+                      "differentiatedUi": {
+                        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                        "differentiatedUiMediaDetails": {
+                          "maxDuration": "3000",
+                          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                          "lottie": {
+
+                          },
+                          "video": {
+
+                          }
+                        }
+                      },
+                      "reviewsSummary": {
+
+                      },
+                      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                      "restaurantOfferPresentationInfo": {
+
+                      },
+                      "externalRatings": {
+                        "aggregatedRating": {
+                          "rating": "--"
+                        }
+                      },
+                      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+                    },
+                    "analytics": {
+                      "context": "seo-data-d53f5c0a-8a66-4a5e-a5bc-a0d0dde6eabc"
+                    },
+                    "cta": {
+                      "link": "https://www.swiggy.com/city/vizag/bombay-restaurant-dabagarden-daba-gardens-dabagarden-rest70356",
+                      "text": "RESTAURANT_MENU",
+                      "type": "WEBLINK"
+                    },
+                    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_JHS_byName"
+                  },
+                  {
+                    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+                    "info": {
+                      "id": "70355",
+                      "name": "Bombay Restaurant-Jyothee Theatre",
+                      "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2025/9/6/0e9b93a1-976f-4fca-b704-1ae5140c6b88_fb52eb22-9db2-4ea6-8302-30206a243ce6.jpg",
+                      "locality": "Daba Gardens",
+                      "areaName": "Allipuram",
+                      "costForTwo": "₹250 for two",
+                      "cuisines": [
+                        "Indian",
+                        "Chinese",
+                        "Tandoor",
+                        "Biryani"
+                      ],
+                      "avgRating": 4.2,
+                      "parentId": "12842",
+                      "avgRatingString": "4.2",
+                      "totalRatingsString": "49K+",
+                      "sla": {
+                        "deliveryTime": 29,
+                        "lastMileTravel": 2.4,
+                        "serviceability": "SERVICEABLE",
+                        "slaString": "25-30 mins",
+                        "lastMileTravelString": "2.4 km",
+                        "iconType": "ICON_TYPE_EMPTY"
+                      },
+                      "availability": {
+                        "nextCloseTime": "2026-06-12 16:00:00",
+                        "opened": true
+                      },
+                      "badges": {
+
+                      },
+                      "isOpen": true,
+                      "type": "F",
+                      "badgesV2": {
+                        "entityBadges": {
+                          "imageBased": {
+
+                          },
+                          "textBased": {
+
+                          },
+                          "textExtendedBadges": {
+
+                          }
+                        }
+                      },
+                      "aggregatedDiscountInfoV3": {
+                        "header": "₹200 OFF",
+                        "subHeader": "ABOVE ₹449",
+                        "discountTag": "FLAT DEAL"
+                      },
+                      "orderabilityCommunication": {
+                        "title": {
+
+                        },
+                        "subTitle": {
+
+                        },
+                        "message": {
+
+                        },
+                        "customIcon": {
+
+                        }
+                      },
+                      "differentiatedUi": {
+                        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                        "differentiatedUiMediaDetails": {
+                          "maxDuration": "3000",
+                          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                          "lottie": {
+
+                          },
+                          "video": {
+
+                          }
+                        }
+                      },
+                      "reviewsSummary": {
+
+                      },
+                      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                      "restaurantOfferPresentationInfo": {
+
+                      },
+                      "externalRatings": {
+                        "aggregatedRating": {
+                          "rating": "--"
+                        }
+                      },
+                      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+                    },
+                    "analytics": {
+                      "context": "seo-data-d53f5c0a-8a66-4a5e-a5bc-a0d0dde6eabc"
+                    },
+                    "cta": {
+                      "link": "https://www.swiggy.com/city/vizag/bombay-restaurant-jyothee-theatre-daba-gardens-allipuram-rest70355",
+                      "text": "RESTAURANT_MENU",
+                      "type": "WEBLINK"
+                    },
+                    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_JHS_byName"
+                  },
+                  {
+                    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+                    "info": {
+                      "id": "1030898",
+                      "name": "Thalaiva Biryani",
+                      "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2026/5/14/ee77c307-6835-40a1-b039-c79d3427e8ad_749b066a-61e1-45ae-bde6-19ce48a2de39.jpeg",
+                      "locality": "laxmi nagar",
+                      "areaName": "Simhachalam",
+                      "costForTwo": "₹400 for two",
+                      "cuisines": [
+                        "Biryani",
+                        "Mughlai",
+                        "Lucknowi",
+                        "Hyderabadi",
+                        "Kebabs",
+                        "Desserts",
+                        "Beverages"
+                      ],
+                      "avgRating": 3.8,
+                      "parentId": "582792",
+                      "avgRatingString": "3.8",
+                      "totalRatingsString": "484",
+                      "sla": {
+                        "deliveryTime": 36,
+                        "lastMileTravel": 9,
+                        "serviceability": "SERVICEABLE",
+                        "slaString": "35-40 mins",
+                        "lastMileTravelString": "9.0 km",
+                        "iconType": "ICON_TYPE_EMPTY"
+                      },
+                      "availability": {
+                        "nextCloseTime": "2026-06-12 23:59:00",
+                        "opened": true
+                      },
+                      "badges": {
+
+                      },
+                      "isOpen": true,
+                      "type": "F",
+                      "badgesV2": {
+                        "entityBadges": {
+                          "imageBased": {
+
+                          },
+                          "textBased": {
+
+                          },
+                          "textExtendedBadges": {
+
+                          }
+                        }
+                      },
+                      "aggregatedDiscountInfoV3": {
+                        "header": "₹200 OFF",
+                        "subHeader": "ABOVE ₹1099",
+                        "discountTag": "FLAT DEAL"
+                      },
+                      "orderabilityCommunication": {
+                        "title": {
+
+                        },
+                        "subTitle": {
+
+                        },
+                        "message": {
+
+                        },
+                        "customIcon": {
+
+                        }
+                      },
+                      "differentiatedUi": {
+                        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                        "differentiatedUiMediaDetails": {
+                          "maxDuration": "3000",
+                          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                          "lottie": {
+
+                          },
+                          "video": {
+
+                          }
+                        }
+                      },
+                      "reviewsSummary": {
+
+                      },
+                      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                      "restaurantOfferPresentationInfo": {
+
+                      },
+                      "externalRatings": {
+                        "aggregatedRating": {
+                          "rating": "--"
+                        }
+                      },
+                      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+                    },
+                    "analytics": {
+                      "context": "seo-data-d53f5c0a-8a66-4a5e-a5bc-a0d0dde6eabc"
+                    },
+                    "cta": {
+                      "link": "https://www.swiggy.com/city/vizag/thalaiva-biryani-laxmi-nagar-simhachalam-rest1030898",
+                      "text": "RESTAURANT_MENU",
+                      "type": "WEBLINK"
+                    },
+                    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_JHS_byName"
+                  }
+                ]

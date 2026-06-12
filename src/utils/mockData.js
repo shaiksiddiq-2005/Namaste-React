@@ -1,17 +1,17 @@
 const resList = [
   {
     name: "Pizza Hut",
-    cuisine: "Italian",
+    cuisines: "Italian",
     deliveryTime: "30 mins",
-    rating: 4.5,
-    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591"
+    avgRating: 4.5,
+    cloudinaryImageId: "https://images.unsplash.com/photo-1513104890138-7c749659a591"
   },
   {
     name: "Domino's",
-    cuisine: "Pizza",
+    cuisines: "Pizza",
     deliveryTime: "25 mins",
-    rating: 4.3,
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"
+    avgRating: 4.3,
+    cloudinaryImageId: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"
   },
   {
     name: "KFC",

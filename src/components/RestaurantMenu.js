@@ -1,7 +1,7 @@
 import { useEffect,useState } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
-import { MENU_IMG_URL } from "../utils/constants";
+import { MENU_API_URL } from "../utils/constants";
 
 const RestaurantMenu=()=>{
 
@@ -13,7 +13,7 @@ console.log(resId);
 
 const fetchMenu= async()=>{
 
-    const data= await fetch(MENU_IMG_URL + resId);
+    const data= await fetch(MENU_API_URL + resId);
     const json= await data.json();
 
     console.log("hello");

@@ -19,8 +19,8 @@
   "author": "Shaik Abubakar Siddiq",
   "type": "commonjs",
   "scripts": {
-    "start" : "parcel index.html",
-    "Build" : "parcel build index.html",
+    "start": "parcel index.html",
+    "Build": "parcel build index.html",
     "test": "jest"
   },
   "devDependencies": {
@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^6.30.4"
   }
 }

@@ -8,14 +8,7 @@ let [restaurantList, setrestaurantList]=useState([]);
 
 const [filteredResto, setfilteredResto] =useState([]);
 
-
-
-
-
 const [searchText,setsearchText]=useState("");
-
-
-
 
 
 useEffect(()=>{
@@ -32,57 +25,38 @@ const fetchData= async ()=>{
 };
 
 
-
-
-
     return restaurantList.length === 0 ? <Shimmer/> : (
-
 
         <div className="body">
             
-                
-
+            
             <div className="filter">
 
-            <div className="search">
-                <input type="text" placeholder="Search restaurants..." className="search-box" value={searchText} 
-                onChange={(e) => {
-                    setsearchText(e.target.value);  
+                <div className="search">
+                    <input type="text" placeholder="Search restaurants..." className="search-box" value={searchText} 
+                    onChange={(e) => {
+                        setsearchText(e.target.value);  
+                    }}/>
+
+                    <button
+                    onClick={()=>{
+                        const searchedRestaurant = restaurantList.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase()));
+                                
+
+                        setfilteredResto(searchedRestaurant);
+                    }}> 
+                    search</button>
                     
-                    
-                }}/>
-
-                <button
-                onClick={()=>{
-                    const searchedRestaurant = restaurantList.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase()));
-                            
-
-
-
-                    setfilteredResto(searchedRestaurant);
-                }}
-                
-                >search</button>
-            </div>
-
-
-
-
-
-
-
+                </div>
 
 
                 <button className="filter-btn" 
                     onClick={ () => { 
                     const filteredList = restaurantList.filter(
-                         (restoCard)=> restoCard.info.avgRating > 4
+                         (restoCard)=> restoCard.info.avgRating > 4.2
                          //restaurants[0].info.avgrating > 4.8 (i.e, 4.2 >4.8 => "false" so, it skip this restoCard ) loop was continous.......
                     );
-
-                    console.log(filteredList);
-
-                    setrestaurantList(filteredList);
+                    setfilteredResto(filteredList);  // change had done from, setrestaurantList filter! button was not working!
                 }}>
 
                     Filter!

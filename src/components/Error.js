@@ -12,8 +12,8 @@ const Error =()=>{
                 Oops!!!!!
             </h1>
             <h2>An Error had occured</h2>
-            {/* <h3>{err.status} : {err.statusText}</h3> */}
-            {/* <h3> {err.error.message} </h3> */}
+            {/* <h3>{err.status} : {err.statusText}</h3>
+            <h3> {err.error.message} </h3> */}
             
         </div>
     )

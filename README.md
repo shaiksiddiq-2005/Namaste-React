@@ -17,3 +17,8 @@
 
 # Babel is compile of Javascript!-
 -  Babel converts the code into Reactcode, but the ReactCode is Javascript's Object 😁
+
+
+
+# Routing
+- There are two types of Routing in Web apps

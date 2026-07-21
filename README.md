@@ -22,3 +22,13 @@
 
 # Routing
 - There are two types of Routing in Web apps
+
+
+
+# Class Based Components 
+- constructor--> initializes state.
+- render --> displays the initial dummy data.
+- componentDidMount --> runs after the first render and fetches data.
+- setState --> updates the state.
+- React renders again with the fetched data.
+- componentDidUpdate --> runs after the update

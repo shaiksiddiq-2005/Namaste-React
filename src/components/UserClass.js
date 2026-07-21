@@ -4,44 +4,56 @@ class UserClass extends React.Component{
 
     constructor(props){
         super(props);
-
+         
         this.state={
-        count :0,
-        count1:0,
-            };
-
-            console.log(`child ${this.props.name} constructor called`)
+            infodata:{
+                name:"dummy name",
+                login:"dummy login",
+                bio:"dummy bio",
+                avatar_url:"https://avatars.githubusercontent.com/u/115770064?v=4",
+            }
+        }
+            console.log("constructor");
     }
 
-    componentDidMount(){
-        console.log(`child ${this.props.name} componentDidMount called`);
+   async componentDidMount(){
 
-    }
+    const data = await fetch("https://api.github.com/users/shaiksiddiq-2005");
+    const jsondata = await data.json();
     
 
-   
-    render(){
-        console.log(`child ${this.props.name} render called`)
+    this.setState({
+        infodata:jsondata,
+    });
+    console.log("componentDidMount");
 
-         // const {name, age}=this.props
+    console.log(jsondata);
+}
+
+componentDidUpdate(){
+    console.log("componentDidUpdate");
+}
+
+
+componentWillUnmount(){
+    console.log("componentWillUnmount");
+}
+
+    
+    render(){
+        console.log("render");
+
+
+         const {name, login, bio, avatar_url} = this.state.infodata;
+         
         return (
             <div className="user-card">
-                <h1> Name:{this.props.name}</h1>
-                <h2> Age: {this.props.age}</h2>
-                <h5>count : {this.state.count}</h5>
-                <h5>count1 : {this.state.count1}</h5>
-
-                <button onClick={ ()=>{
-                   
-                    // NEVER UPDATE THE STATE VARIABLE DIRECTLY USE SETSTATE() FUNCTION;
-                        this.setState(
-                            { 
-                                count: this.state.count + 1,
-                                count1: this.state.count1 + 1,
-                            }
-                        )
-                    }
-                }> Count Increase</button>
+                <img src={avatar_url} alt={name} height="50px" width="50px"/>
+                <h4> Name:{name}</h4>
+                <h4> userName: {login}</h4>
+                <h4> Bio: {bio}</h4>
+                <h3> Contact : 8125276786</h3>
+                
             </div>
         );
     }

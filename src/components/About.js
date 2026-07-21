@@ -51,3 +51,17 @@ class About extends React.Component{
 
 
 export default About;
+
+
+
+// ComponentDidMount process
+
+// -child first constructor called
+// -child first render called
+// -child second  constructor called
+// -child second  render called
+// -child third constructor called
+// -child third render called
+// -child first componentDidMount called
+// -child second  componentDidMount called
+// -child third componentDidMount called

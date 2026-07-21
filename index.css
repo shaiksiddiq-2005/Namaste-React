@@ -147,3 +147,13 @@
     margin: 25px 0px 0px 10px;
     height: 21px;
 }
+
+
+.user-card{
+    border: 1px solid black;
+    margin : 2px;
+    padding: 3px 0px 0px 10px;
+    height: 200px;
+    width: 250px;
+    border-radius: 10px
+}

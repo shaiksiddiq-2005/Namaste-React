@@ -22,8 +22,8 @@ const fetchData= async ()=>{
     const json= await data.json();
     console.log(json);
    
-    setrestaurantList(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
-    setfilteredResto(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
+    setrestaurantList(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+    setfilteredResto(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
 };
 
 

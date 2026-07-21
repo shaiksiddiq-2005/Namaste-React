@@ -47,6 +47,8 @@ const {itemCards} = resInfo.cards[5].groupedCard.cardGroupMap.REGULAR.cards[1].c
 
             <h2> Menu</h2>
 
+            
+
             <ul>
                 
                 { itemCards.map( (meno) => (

@@ -9,4 +9,4 @@ export const MENU_API_URL =
     "https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.6852956&lng=83.20374009999999&restaurantId=";   //743800
 
 export const ResturantCard_API=
-    "https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=17.6852956&lng=83.20374009999999&carousel=true&third_party_vendor=1";
+    "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.6852956&lng=83.20374009999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";

@@ -3,6 +3,7 @@ import { ResturantCard_API } from "../utils/constants";
 import {useEffect, useState} from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import  useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
 
@@ -25,6 +26,19 @@ const fetchData= async ()=>{
     setrestaurantList(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
     setfilteredResto(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
 };
+
+
+const onlineStatus = useOnlineStatus();
+
+if(onlineStatus === false){
+    return (
+        <div>
+        <h1>Looks like you're offline please check your network connection </h1>
+        <h2> Thank u </h2>
+        </div>
+    )
+}
+
 
 
     return restaurantList.length === 0 ? <Shimmer/> : (
@@ -61,7 +75,7 @@ const fetchData= async ()=>{
                     setfilteredResto(filteredList);  // change had done from, setrestaurantList filter! button was not working!
                 }}>
 
-                    Filter!
+                    Filter for Top Rated Restaurants
                 </button>  
             </div>
 

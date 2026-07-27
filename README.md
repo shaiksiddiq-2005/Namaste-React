@@ -7,7 +7,7 @@
 - it has file watching Algorithm\
 - Caching for faster Builds
 - Diagnotics--> Beautiful error 
-- Bundling
+- Bundling --> it takes all files amd makes them into one file
 - Compressing
 - Minification
 - Image optimization
@@ -32,3 +32,27 @@
 - setState --> updates the state.
 - React renders again with the fetched data.
 - componentDidUpdate --> runs after the update
+
+
+
+
+# The process to make break our Application into small pieces is called 
+- Breaking down the Large Applications into small logical chunks 
+- Chunking
+- Code Splitting
+- Dynamic Bundling
+- Lazy loading --> We don't load everything which is present in the main Application, 
+    we only load the component when it was required.
+
+- On demand loading --> the component dose not load with the main application, it only loads when it is called or clicked!
+- Dynamic import
+
+- These techniques were done when the Application size was increasing and when the application was bloating.. so that we can reduce the size of the applications
+        - so that all the code does not runs at once 
+        - Only the required portion of the application only run
+                - Example -->
+                              Swiggy                 Amazon 
+                                |                      |
+                              /   \                  /   \
+                      instamart    Food        Grocery    Products 
+ - Simply it is used to distrubute the load.

@@ -22,6 +22,8 @@ const Grocery=()=>{
                     Beverages
                 </li>
             </ul>
+
+            
         </div>
     );
 };

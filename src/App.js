@@ -6,9 +6,11 @@ import { createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
-import RestaurantMenu from "./components/RestaurantMenu";
-import {lazy, Suspense} from "react"; 
-import Shimmer from "./components/Shimmer";
+import RestaurantMenu from "./components/RestaurantMenu"; 
+import {lazy, Suspense} from "react";  // so that we can use Lasy ans Suspense, Lazy is is used to distribute the load which is on the main application and Suspense is used to show the content when the code is not available to display.
+import Shimmer from "./components/Shimmer"; // Shimmer is a component which is used to display the loading state of the application when the content is not available or taking time to diplay. so that the user experience will be good.
+
+import "../index.css"; // To import the TailwindCss from the file index.css
 
 
 // import Instamart from "./components/Instamart";

@@ -35,7 +35,7 @@ const OnlineStatus = useOnlineStatus();
                     <li>
                         <Link to="/instamart"> Instamart </Link>
                     </li>
-                    <li><Link to="/grocery">Grocery</Link> </li>
+                    <li><Link to="/grocery"><u>Grocery</u></Link> </li>
                     <li><Link to="/about">About Us </Link> </li>
                     <li><Link to="/contact">Contact Us</Link></li>
                     <li> Cart </li>

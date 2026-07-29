@@ -19,7 +19,7 @@ useEffect(()=>{
 const OnlineStatus = useOnlineStatus();
 
     return (
-        <div className="flex justify-between border">
+        <div className="flex justify-between border bg-white hover:hover:bg-gray-300">
 
             <div id="logo">
                 <img className="w-28"

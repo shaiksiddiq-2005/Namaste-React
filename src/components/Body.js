@@ -46,10 +46,10 @@ if(onlineStatus === false){
         <div className="body">
             
             
-            <div className="filter">
+            <div className="flex justify-center m-2 p-4">
 
                 <div className="search">
-                    <input type="text" placeholder="Search restaurants..." className="search-box" value={searchText} 
+                    <input type="text" placeholder="Search restaurants..." className="border p-2 m-2 rounded w-100 h-10" value={searchText} 
                     onChange={(e) => {
                         setsearchText(e.target.value);  
                     }}/>
@@ -66,7 +66,7 @@ if(onlineStatus === false){
                 </div>
 
 
-                <button className="filter-btn" 
+                <button className="border p-2 m-2 bg-green-100 rounded-lg hover:bg-blue-300 " 
                     onClick={ () => { 
                     const filteredList = restaurantList.filter(
                          (restoCard)=> restoCard.info.avgRating > 4.2
@@ -80,7 +80,7 @@ if(onlineStatus === false){
             </div>
 
 
-            <div className="res-container">
+            <div className="flex flex-wrap m-2 p-4 justify-center">
             {filteredResto.map((restaurant, index) => (
                <Link 
                 key={restaurant.info.id}

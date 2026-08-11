@@ -18,7 +18,8 @@
 # Babel is compile of Javascript!-
 -  Babel converts the code into Reactcode, but the ReactCode is Javascript's Object 😁
 
-
+# Mapping 
+- key={index} // not using key(not Acceptable) <<<< using index as key  <<<< using unique id (Best pratice)
 
 # Routing
 - There are two types of Routing in Web apps
@@ -36,7 +37,7 @@
 
 
 
-# The process to make break our Application into small pieces is called 
+# The process of breaking our Application into small pieces is called 
 - Breaking down the Large Applications into small logical chunks 
 - Chunking
 - Code Splitting
@@ -56,3 +57,9 @@
                               /   \                  /   \
                       instamart    Food        Grocery    Products 
  - Simply it is used to distrubute the load.
+
+
+# Variable 
+- If a variable is stored in @type 
+---> this is wrong format of storing data in a variable,Javascript Engine doesn't understand.
+- Then we can access that variable by using ["@name"]

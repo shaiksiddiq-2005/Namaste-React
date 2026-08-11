@@ -2,61 +2,23 @@ const Shimmer=()=>{
     return (
         <div className="Shimmer-container">
 
-            <div className="shimmer-card"> 
-                <div className="inner-shimmer"> </div>
-                <div className="shimmer-title"></div>
-                <div className="shimmer-rating"></div>
-                <div className="shimmer-order"></div>
-            </div>
-            <div className="shimmer-card"> 
-                <div className="inner-shimmer"> </div>
-                <div className="shimmer-title"></div>
-                <div className="shimmer-rating"></div>
-                <div className="shimmer-order"></div>
-            </div>
-            <div className="shimmer-card"> 
-                <div className="inner-shimmer"> </div>
-                <div className="shimmer-title"></div>
-                <div className="shimmer-rating"></div>
-                <div className="shimmer-order"></div>
-            </div>
-            <div className="shimmer-card"> 
-                <div className="inner-shimmer"> </div>
-                <div className="shimmer-title"></div>
-                <div className="shimmer-rating"></div>
-                <div className="shimmer-order"></div>
-            </div>
-            <div className="shimmer-card"> 
-                <div className="inner-shimmer"> </div>
-                <div className="shimmer-title"></div>
-                <div className="shimmer-rating"></div>
-                <div className="shimmer-order"></div>
-            </div>
-            <div className="shimmer-card"> 
-                <div className="inner-shimmer"> </div>
-                <div className="shimmer-title"></div>
-                <div className="shimmer-rating"></div>
-                <div className="shimmer-order"></div>
-            </div>
-            <div className="shimmer-card"> 
-                <div className="inner-shimmer"> </div>
-                <div className="shimmer-title"></div>
-                <div className="shimmer-rating"></div>
-                <div className="shimmer-order"></div>
-            </div>
-            <div className="shimmer-card"> 
-                <div className="inner-shimmer"> </div>
-                <div className="shimmer-title"></div>
-                <div className="shimmer-rating"></div>
-                <div className="shimmer-order"></div>
-            </div>
-            <div className="shimmer-card"> 
-                <div className="inner-shimmer"> </div>
-                <div className="shimmer-title"></div>
-                <div className="shimmer-rating"></div>
-                <div className="shimmer-order"></div>
-            </div>
+            <div className=" flex flex-wrap content-between gap-4 m-5 justify-center" > 
+                <h1 className="bg-gray-300 animate-pulse h-80 w-50 ">Lodaing...</h1>
+                <h1 className="bg-gray-300 animate-pulse h-80 w-50 ">Lodaing...</h1>
+                <h1 className="bg-gray-300 animate-pulse h-80 w-50 ">Lodaing...</h1>
+                <h1 className="bg-gray-300 animate-pulse h-80 w-50 ">Lodaing...</h1>
+                <h1 className="bg-gray-300 animate-pulse h-80 w-50 ">Lodaing...</h1>
+                <h1 className="bg-gray-300 animate-pulse h-80 w-50 ">Lodaing...</h1>
+                <h1 className="bg-gray-300 animate-pulse h-80 w-50 ">Lodaing...</h1>
+                <h1 className="bg-gray-300 animate-pulse h-80 w-50 ">Lodaing...</h1>
+                <h1 className="bg-gray-300 animate-pulse h-80 w-50 ">Lodaing...</h1>
+                <h1 className="bg-gray-300 animate-pulse h-80 w-50 ">Lodaing...</h1>
+                <h1 className="bg-gray-300 animate-pulse h-80 w-50 ">Lodaing...</h1>
+                <h1 className="bg-gray-300 animate-pulse h-80 w-50 ">Lodaing...</h1>
+                <h1 className="bg-gray-300 animate-pulse h-80 w-50 ">Lodaing...</h1>
         
+            </div>
+           
         </div>
     );
 };

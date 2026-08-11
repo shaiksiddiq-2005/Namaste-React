@@ -11,12 +11,28 @@ const RestaurantCard = ({data}) => {
             <h1 className="py-2 text-lg"> <b> {data.name} </b></h1>
             <h3>{data.cuisines.join(", ")}</h3>
             <h3>{data.costForTwo}</h3>  
-            <h3>{data.avgRating}</h3>  
-              
+            <h3>{data.avgRating}</h3>
+
          
         </div>
     );
 };
+
+
+export const resturantOnlineStatus = (RestaurantCard) => {
+    return(props)=>{
+        return(
+            <div>
+                <label className="absolute bg-black text-green-500 text-xs mx-4 p-1 border-gray-500 border-2 "> Online</label>
+                <RestaurantCard {...props}/>  
+            </div>
+        );
+    }
+
+
+    }
+
+
 
 
 export default RestaurantCard;

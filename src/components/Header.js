@@ -1,16 +1,21 @@
 import { LOGO_URL, MAIN_LOGO_URL } from "../utils/constants";
-import { useState, useEffect} from "react";
+import { useState, useEffect, useContext} from "react";
 import {Link} from "react-router-dom";
 import useOnlineStatus from "../utils/useonlineStatus";
+import userDetails from "../utils/contextAPI";
+
+
 
 
 
 const Header =()=>{
 
+const data = useContext(userDetails);
+console.log(data.name);
 
 
 let [btnName, setbtnName]=useState("Login");
-console.log("header rended");
+
 
 useEffect(()=>{
     console.log("use effect called", btnName);
@@ -47,6 +52,9 @@ const OnlineStatus = useOnlineStatus();
                         {btnName} 
                         
                         </button>
+                    </li>
+                    <li>
+                        {data.name}
                     </li>
                 </ul>
                 

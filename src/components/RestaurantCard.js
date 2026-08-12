@@ -1,8 +1,11 @@
 import { IMG_URL } from "../utils/constants";
+ 
 const RestaurantCard = ({data}) => {
+
+   
     
     return (
-        <div className="w-60 h-110 m-4 p-4 shadow-lg bg-gray-100 hover:bg-gray-200 rounded-lg">
+        <div className="w-60 h-130 m-4 p-4 shadow-lg bg-gray-100 hover:bg-gray-200 rounded-lg">
     
             <img className="w-56 h-56" 
                 src={IMG_URL + data.cloudinaryImageId}
@@ -12,6 +15,8 @@ const RestaurantCard = ({data}) => {
             <h3>{data.cuisines.join(", ")}</h3>
             <h3>{data.costForTwo}</h3>  
             <h3>{data.avgRating}</h3>
+            <h3>{data.sla.slaString}</h3>
+            
 
          
         </div>

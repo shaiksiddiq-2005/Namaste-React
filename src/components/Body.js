@@ -41,7 +41,7 @@ const fetchData= async ()=>{
 
  // To check the restaurantList and filteredResto state variables whenever they change, we can use the useEffect hook with these variables as dependencies. This will allow us to log their values to the console whenever they are updated.
 // useEffect(() => {
-//     console.log("restaurantList:", restaurantList);
+    console.log("restaurantList:", restaurantList);
 //     console.log("filteredResto:", filteredResto);
 // }, [restaurantList, filteredResto]); 
 

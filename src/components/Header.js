@@ -11,7 +11,7 @@ import userDetails from "../utils/contextAPI";
 const Header =()=>{
 
 const data = useContext(userDetails);
-console.log(data.name);
+
 
 
 let [btnName, setbtnName]=useState("Login");

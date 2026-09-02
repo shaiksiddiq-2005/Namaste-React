@@ -106,7 +106,7 @@ const ResturantWithOnlineStatus = resturantOnlineStatus(RestaurantCard);  //  Hi
             
                      {
                        restaurant?.info?.isOpen
-                        ? <ResturantWithOnlineStatus data={restaurant?.info}/> 
+                        ? <ResturantWithOnlineStatus data={restaurant?.info}/>  //HOC
                         : <RestaurantCard data={restaurant?.info} />
                      }
 

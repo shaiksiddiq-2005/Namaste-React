@@ -10,6 +10,8 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu"; 
 import {lazy, Suspense} from "react";  // so that we can use Lasy ans Suspense, Lazy is is used to distribute the load which is on the main application and Suspense is used to show the content when the code is not available to display.
 import Shimmer from "./components/Shimmer"; // Shimmer is a component which is used to display the loading state of the application when the content is not available or taking time to diplay. so that the user experience will be good.
+import {useState, useEffect} from "react";
+
 
 import "../index.css"; // To import the TailwindCss from the file index.css
 
@@ -18,19 +20,47 @@ import "../index.css"; // To import the TailwindCss from the file index.css
 // import Grocerys from "./components/grocery";
 
 const Instamart = lazy(()=> import("./components/Instamart"));  // Lazy loading or code splitting is a technique in React that allows you to load components only when they are needed, rather than loading them all at once. This can improve the performance of your application by reducing the initial load time and improving the user experience.
-
 const Grocery = lazy(()=> import("./components/Grocery"));
 
+import userDetails from "./utils/contextAPI"; // importing the context API from the utils folder to use it in the application.
+
+
+
+
 const AppLayout = ()=> {
+
+// Provider example
+const [UserName, setUserName] = useState(); // using the useState hook to set the userName state and setUserName function to update the userName state.
+useEffect( ()=>{
+        const data={
+                        userName: "sid",
+                        age: 20,
+                        location: "Visakhapatnam",
+                        role: "Developer"
+                    }
+                        setUserName(data.userName); // setting the userName state to the data object which is created above.
+    }, []);
+
+
     return (
         <div className="applayout">
-        <Header/>
-        <Outlet/>
-        <Footer/>
+
+        <userDetails.Provider value={{name: UserName}}> 
+            <Header/> 
+        </userDetails.Provider> {/* using the context API to provide the userName state to the entire application. */}
+       
+            <Outlet/>
+            <Footer/>
 
         </div>
     );
 };
+
+
+
+
+
+
 
 
 
@@ -74,12 +104,6 @@ const appRouter = createBrowserRouter([
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
 root.render(<RouterProvider router={appRouter} />);
-
-
-
-
-
-
 
 
 

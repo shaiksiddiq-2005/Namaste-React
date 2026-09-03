@@ -72,9 +72,7 @@ componentWillUnmount(){
                 <div className="m-4 p-4">   {/* This part is made up of context API, Using Consumer */}
                     <b>loggedIn User: </b>
                     <userDetails.Consumer>                
-                        {(user) => <div><h1> {user.name} </h1>
-                        <h1> {user.name} </h1></div>
-                        } 
+                        {(user) => <h1> {user.name} </h1>} 
                         
                     </userDetails.Consumer>
                 </div>

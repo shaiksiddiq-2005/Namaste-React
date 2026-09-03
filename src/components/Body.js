@@ -3,11 +3,14 @@ import {resturantOnlineStatus} from "./RestaurantCard";
 
 import { ResturantCard_API } from "../utils/constants"; 
 
-import {useEffect, useState} from "react";
+import {useEffect, useState, useContext} from "react";
+
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 
 import  useOnlineStatus from "../utils/useOnlineStatus";
+
+import userDetails from "../utils/contextAPI";  // importing the context API from the utils folder to use it in the application.
 
 const Body = () => {
 
@@ -59,6 +62,7 @@ if(onlineStatus === false){
 
 const ResturantWithOnlineStatus = resturantOnlineStatus(RestaurantCard);  //  Higher order component(HOC) is used to check the online status of the user and display the restaurant card accordingly. if the user is offline then the restaurant card will not be displayed and a message will be displayed to the user.
 
+const {name, setUserName} = useContext(userDetails);  // using the useContext hook to get the setUserName function from the context API and use it in the component. The setUserName function is used to update the userName state in the AppLayout component.
 
     return restaurantList?.length === 0 ? <Shimmer/> : (
 
@@ -96,6 +100,16 @@ const ResturantWithOnlineStatus = resturantOnlineStatus(RestaurantCard);  //  Hi
 
                     Filter for Top Rated Restaurants
                 </button>  
+
+                <div className=""> 
+                    <label> Owner: </label>
+                    <input
+                            className="border-1 border-blue my-3" 
+                            value={name}
+                            onChange={(e)=> setUserName(e.target.value)}
+                    />
+                </div>
+
             </div>
 
 
@@ -115,6 +129,8 @@ const ResturantWithOnlineStatus = resturantOnlineStatus(RestaurantCard);  //  Hi
             ))}
            
             </div>
+
+           
 
              
         </div>

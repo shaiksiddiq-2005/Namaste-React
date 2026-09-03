@@ -29,8 +29,8 @@ import userDetails from "./utils/contextAPI"; // importing the context API from 
 
 const AppLayout = ()=> {
 
-// Provider example
-const [UserName, setUserName] = useState(); // using the useState hook to set the userName state and setUserName function to update the userName state.
+// Provider example, it is used to override the default value of the context API and pass the value to the child components. The value passed to the provider will be available to all the child components of the provider. The value can be accessed using the useContext hook in the child components.
+const [UserName, setUserName] = useState(""); // using the useState hook to set the userName state and setUserName function to update the userName state.
 useEffect( ()=>{
         const data={ // Dummy object, to set the userName state to the data object which is created below.
                         userName: "sid",
@@ -45,16 +45,26 @@ useEffect( ()=>{
     return (
         <div className="applayout">
 
-        <userDetails.Provider value={{name: UserName}}> 
-            <Header/> {/* Owner name is --> Sid */}
+       {/*  <userDetails.Provider value={{name: UserName}}> 
+                <Header/> //Owner name is --> Sid
 
-            <userDetails.Provider value={{name:"Akshay Saini"}}>
-            <Outlet/>  {/* Owner name is --> Akshay Saini */}
-            </userDetails.Provider>
+                    <userDetails.Provider value={{name:"Akshay Saini"}}>
+                        <Outlet/>  // Owner name is --> Akshay Saini 
+                    </userDetails.Provider>
 
-        </userDetails.Provider> 
+            </userDetails.Provider> 
 
-            <Footer/>  {/* Owner name is --> Default */}
+            <Footer/>  //  Owner name is --> Default 
+
+        */}
+
+
+            <userDetails.Provider value={{name: UserName, setUserName}}> 
+            <Header/> 
+            <Outlet/>  
+            <Footer/> 
+            </userDetails.Provider> 
+            
 
         </div>
     );

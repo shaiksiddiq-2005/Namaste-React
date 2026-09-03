@@ -1,6 +1,13 @@
 import { IMG_URL } from "../utils/constants";
+import { useContext } from "react";
+import userDetails from "../utils/contextAPI";
+
  
 const RestaurantCard = ({data}) => {
+
+    const userData = useContext(userDetails);
+
+
 
    
     
@@ -16,6 +23,7 @@ const RestaurantCard = ({data}) => {
             <h3>{data.costForTwo}</h3>  
             <h3>{data.avgRating}</h3>
             <h3>{data.sla.slaString}</h3>
+            <h3>Owner: {userData.name}</h3>
             
 
          

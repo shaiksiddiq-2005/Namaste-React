@@ -2,7 +2,8 @@ import { createContext } from "react";
 
 
 const userDetails = createContext({
-    name: "default user",   
-});
+    name: "Siddiq Shaik",  
+    age: 21,
+}); 
 
 export default userDetails;

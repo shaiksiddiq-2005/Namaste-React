@@ -2,7 +2,7 @@ import { createContext } from "react";
 
 
 const userDetails = createContext({
-    name: "Siddiq Shaik",  
+    name: "default",  
     age: 21,
 }); 
 

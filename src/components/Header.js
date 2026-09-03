@@ -54,7 +54,7 @@ const OnlineStatus = useOnlineStatus();
                         </button>
                     </li>
                     <li>
-                        {data.name}
+                       Owner: {data.name}
                     </li>
                 </ul>
                 

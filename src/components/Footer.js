@@ -15,7 +15,7 @@ const Footer=()=>{
             <h1>
                 FOOTER
             </h1>
-            <p> copy rights || All rights reserved || Organic 100% || {data.name} </p>
+            <p> copy rights || All rights reserved || Organic 100% || Owner: {data.name} </p>
 
         </div>
 

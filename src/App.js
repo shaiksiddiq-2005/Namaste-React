@@ -32,7 +32,7 @@ const AppLayout = ()=> {
 // Provider example
 const [UserName, setUserName] = useState(); // using the useState hook to set the userName state and setUserName function to update the userName state.
 useEffect( ()=>{
-        const data={
+        const data={ // Dummy object, to set the userName state to the data object which is created below.
                         userName: "sid",
                         age: 20,
                         location: "Visakhapatnam",
@@ -46,11 +46,15 @@ useEffect( ()=>{
         <div className="applayout">
 
         <userDetails.Provider value={{name: UserName}}> 
-            <Header/> 
-        </userDetails.Provider> {/* using the context API to provide the userName state to the entire application. */}
-       
-            <Outlet/>
-            <Footer/>
+            <Header/> {/* Owner name is --> Sid */}
+
+            <userDetails.Provider value={{name:"Akshay Saini"}}>
+            <Outlet/>  {/* Owner name is --> Akshay Saini */}
+            </userDetails.Provider>
+
+        </userDetails.Provider> 
+
+            <Footer/>  {/* Owner name is --> Default */}
 
         </div>
     );

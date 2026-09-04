@@ -24,39 +24,64 @@ useEffect(()=>{
 const OnlineStatus = useOnlineStatus();
 
     return (
-        <div className="flex justify-between border bg-white hover:hover:bg-gray-300">
+        <div className="flex justify-between border bg-white h-24">
 
             <div id="logo">
-                <img className="w-28"
+                <img className="w-23 hover:scale-110 transition-all duration-500 ease-in-out"
                 src={MAIN_LOGO_URL}
                 />
             </div>
 
             <div className ="nav-items">
                 
-                <ul className="flex gap-6 m-4 p-4 ">
+                <ul className="flex gap-6 m-4 p-4 hover:text-orange-600 text-gray-700 font-semibold text-lg">
+
                     <li> {OnlineStatus ? "🍏Online " : "🔴Offline "} </li>
-                    <li><Link to="/">Home</Link> </li>
-                    <li>
-                        <Link to="/instamart"> Instamart </Link>
+
+                    <li className="relative w-fit cursor-pointer group" >
+                    <Link to="/">Home</Link> 
+                    <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
                     </li>
-                    <li><Link to="/grocery">Grocery</Link> </li>
-                    <li><Link to="/about">About Us </Link> </li>
-                    <li><Link to="/contact">Contact Us</Link></li>
-                    <li> Cart </li>
-                    <li>
-                       <button className="login-btnName" 
+
+                    <li className= "relative w-fit cursor-pointer group">
+                    <Link to="/about">About Us </Link> 
+                    <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
+                    </li>
+
+                    <li className= "relative w-fit cursor-pointer group">
+                    <Link to="/contact">Contact Us</Link> 
+                    <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
+                    </li>
+
+                    <li className= "relative w-fit cursor-pointer group">
+                    <Link to="/instamart"> Instamart </Link> 
+                    <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
+                    </li>
+
+                    <li className= "relative w-fit cursor-pointer group">
+                    <Link to="/grocery">Grocery</Link> 
+                    <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
+                    </li>
+
+                    <li className= "relative w-fit cursor-pointer group">
+                    <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
+                    Cart </li>
+
+                    <li >
+                       <button className="hover:border-1 px-1 hover:border-black rounded-xl" 
                                 onClick={()=>{
                                      btnName==="Login" ? setbtnName("logOut"):setbtnName("Login");
                        }}>
                         {btnName} 
-                        
                         </button>
                     </li>
-                    <li>
-                       Owner: {data.name}
-                    </li>
+
+
+                    <li> Owner: {data.name}  </li>
+                  
                 </ul>
+
+                
                 
                 
             </div>

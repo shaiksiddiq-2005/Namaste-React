@@ -33,7 +33,7 @@ const AppLayout = ()=> {
 const [UserName, setUserName] = useState(""); // using the useState hook to set the userName state and setUserName function to update the userName state.
 useEffect( ()=>{
         const data={ // Dummy object, to set the userName state to the data object which is created below.
-                        userName: "sid",
+                        userName: "Siddiq",
                         age: 20,
                         location: "Visakhapatnam",
                         role: "Developer"

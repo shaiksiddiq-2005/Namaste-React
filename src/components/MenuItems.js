@@ -20,9 +20,11 @@ const Menultems=({data})=>{
 
 
                         <div>
-                            <button onClick= {shaik} className="absolute bg-white hover:bg-gray-100 rounded-lg p-1 text-xs text-green-700  "> Add+ </button>
-                            
-                            <img className=" w-35 h-auto rounded-xl" src={IMG_URL+item.card.info.imageId} alt="name"/>
+                            <button className="absolute rounded-lg p-1 text-xs group flex bg-black  text-white h-6 w-12">
+                                 <span className="transition-transform duration-300 group-hover:translate-x-1"> Add→ </span>
+                            </button>
+
+                            <img className=" w-35 h-auto rounded-xl " src={IMG_URL+item.card.info.imageId} alt="name"/>
                         </div>
                         
 

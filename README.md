@@ -63,3 +63,13 @@
 - If a variable is stored in @type 
 ---> this is wrong format of storing data in a variable,Javascript Engine doesn't understand.
 - Then we can access that variable by using ["@name"]
+
+
+
+# Redux Toolkit
+- Install reduxtoolkit --> npm i @reduxjs/toolkit and npm i react-redux
+- Build Our store
+- Connect Our store to App
+- Create slices(Cart slice)
+- Dispatch(Actions)
+- Selector

@@ -52,7 +52,9 @@ console.log(categories)
 
             <h1 className="text-3xl mt-3 font-bold">{name}</h1>
             <br/>
-            <img className="h-110 w-8/12 mx-auto rounded-2xl " src={IMG_URL + cloudinaryImageId} alt={name}/>
+            
+            <img className="h-110 w-8/12 mx-auto rounded-2xl transition-all duration-500 ease-in-out hover:scale-110 " src={IMG_URL + cloudinaryImageId} alt={name}/>
+            <br/>
             <h3 className="font-bold">{cuisines.join(", ")}</h3>
             <h3 className="font-semibold">🌟{avgRating} ({totalRatingsString})</h3>
             <h4 className="font-medium">{costForTwoMessage}</h4>

@@ -9,7 +9,7 @@ const Footer=()=>{
     const data = useContext(userDetails);
 
     return(
-        <div className = "bg-white hover:bg-gray-100 h-30 text-center p-5 text-lg text-gray-700 font-semibold">
+        <div className = "bg-gray-100 h-30 text-center p-5 text-lg text-gray-700 font-semibold ">
 
 
             <h1>

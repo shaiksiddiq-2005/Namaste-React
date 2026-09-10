@@ -1,157 +1,185 @@
 import RestaurantCard from "./RestaurantCard";
-import {resturantOnlineStatus} from "./RestaurantCard";
+import { resturantOnlineStatus } from "./RestaurantCard";
 
-import { ResturantCard_API } from "../utils/constants"; 
+import { ResturantCard_API } from "../utils/constants";
 
-import {useEffect, useState, useContext} from "react";
+import { useEffect, useState, useContext } from "react";
 
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 
-import  useOnlineStatus from "../utils/useOnlineStatus";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
-import userDetails from "../utils/contextAPI";  // importing the context API from the utils folder to use it in the application.
+import userDetails from "../utils/contextAPI";
 
 const Body = () => {
 
+    let [restaurantList, setrestaurantList] = useState([]);
 
-let [restaurantList, setrestaurantList]=useState([]);
+    const [filteredResto, setfilteredResto] = useState([]);
 
-const [filteredResto, setfilteredResto] =useState([]);
-
-const [searchText,setsearchText]=useState("");
-
- 
-
-useEffect(()=>{
-    fetchData();
-   
-}, []);
+    const [searchText, setsearchText] = useState("");
 
 
+    useEffect(() => {
+        fetchData();
 
-const fetchData= async ()=>{
-    const data= await fetch(ResturantCard_API);
-    const json= await data.json();
-
-    const restaurantCards = json?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-   
-    setrestaurantList(restaurantCards);
-    setfilteredResto(restaurantCards);
-};
+    }, []);
 
 
+    const fetchData = async () => {
+        const data = await fetch(ResturantCard_API);
+        const json = await data.json();
 
- // To check the restaurantList and filteredResto state variables whenever they change, we can use the useEffect hook with these variables as dependencies. This will allow us to log their values to the console whenever they are updated.
-// useEffect(() => {
+        const restaurantCards =
+            json?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+
+        setrestaurantList(restaurantCards);
+        setfilteredResto(restaurantCards);
+    };
+
+
     console.log("restaurantList:", restaurantList);
-//     console.log("filteredResto:", filteredResto);
-// }, [restaurantList, filteredResto]); 
 
 
-const onlineStatus = useOnlineStatus();
+    const onlineStatus = useOnlineStatus();
 
-if(onlineStatus === false){
-    return (
-        <div>
-        <h1>Looks like you're offline please check your network connection </h1>
-        <h2> Thank u </h2>
-        </div>
-    )
-}
+    if (onlineStatus === false) {
+        return (
+            <div className="text-center p-4">
+                <h1 className="text-xl sm:text-2xl font-bold">
+                    Looks like you're offline please check your network connection
+                </h1>
 
-const ResturantWithOnlineStatus = resturantOnlineStatus(RestaurantCard);  //  Higher order component(HOC) is used to check the online status of the user and display the restaurant card accordingly. if the user is offline then the restaurant card will not be displayed and a message will be displayed to the user.
-
-
-// contextAPI example, it is used to get the value of the context API and use it in the component. The value can be accessed using the useContext hook in the component.
-const context = useContext(userDetails);  // using the useContext hook to get the setUserName function from the context API and use it in the component. The setUserName function is used to update the userName state in the AppLayout component.
-const name=context.name;
-const setUserName=context.setUserName;
+                <h2 className="mt-4">
+                    Thank u
+                </h2>
+            </div>
+        );
+    }
 
 
-    return restaurantList?.length === 0 ? <Shimmer/> : (
-
-        <div className="bg-orange-600">
-
-            <br/>
-            <br/>
-            <div className="text-center text-5xl text-white font-bold p-4 hover:scale-105 transition-all duration-300"> Order food & groceries. Discover <br/> best restaurants. Swiggy it!</div> 
-            <br/>
-            <br/>
-    
-            <div className="flex justify-center p-4">
-
-                <div className=" flex relative">
+    const ResturantWithOnlineStatus = resturantOnlineStatus(RestaurantCard);
 
 
-                        <button className = "absolute rounded-xl bg-white hover:bg-gray-100 w-15 p-1 mt-4 mr-3 mb-3 ml-130"
-                             onClick={()=>{
-                                    const searchedRestaurant = restaurantList.filter((res)=> res?.info?.name.toLowerCase().includes(searchText.toLowerCase()));
-                    
-                                    setfilteredResto(searchedRestaurant);
-                                    }}> 
-                        🔎︎</button>
+    const context = useContext(userDetails);
 
-                        <div className="search">
-                            <input type="text" 
-                                className="border-3 border-gray-300 p-2 rounded-xl w-150 h-16 bg-white text-gray-700 text-xl font-semibold" 
-                                placeholder="Search for Restaurants...." 
-                                value={searchText} 
-                                onChange={(e) => {
-                                setsearchText(e?.target?.value);  
-                            }}/>   
-                         </div>
+    const name = context.name;
+    const setUserName = context.setUserName;
 
-                        
-                                
-                </div>
 
-                <button className="border-3 border-gray-300 rounded-xl p-2 mx-5 w-100 h-16 bg-white text-xl text-gray-400 font-semibold " 
-                    onClick={ () => { 
-                    const filteredList = restaurantList?.filter(
-                         (restoCard)=> restoCard?.info?.avgRating > 4.2
-                         //restaurants[0].info.avgrating > 4.8 (i.e, 4.2 >4.8 => "false" so, it skip this restoCard ) loop was continous.......
-                    );
-                    setfilteredResto(filteredList);  // change had done from, setrestaurantList filter! button was not working!
-                }}>
+    return restaurantList?.length === 0 ? (
+        <Shimmer />
+    ) : (
 
-                    Filter for Top Rated Restaurants
-                </button>  
-                
+        <div className="bg-orange-600 min-h-screen w-full">
 
-                {/* Owner Input value instantly changes contextAPI */}
-                <div className=""> 
-                    <label className="font-bold text-gray-700">USER: </label>
+            {/* Heading */}
+
+            <div className="text-center text-2xl sm:text-4xl md:text-5xl text-white font-bold px-4 py-8 sm:py-12 hover:scale-105 transition-all duration-300">
+
+                Order food & groceries. Discover
+                <br className="hidden sm:block" />
+                best restaurants. Swiggy it!
+
+            </div>
+
+
+            {/* Search + Filter + User */}
+
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-4 px-4 pb-8">
+
+
+                {/* Search */}
+
+                <div className="flex relative w-full sm:w-auto">
+
                     <input
-                            className="border-3 border-gray-300 rounded-xl p-2 my-3 text-lg text-gray-700 font-semibold bg-white" 
-                            value={name}
-                            onChange={(e)=> setUserName(e.target.value)}
+                        type="text"
+                        className="border-3 border-gray-300 p-2 rounded-xl w-full sm:w-[450px] md:w-[550px] lg:w-[500px] h-14 sm:h-16 bg-white text-gray-700 text-base sm:text-xl font-semibold pr-16"
+                        placeholder="Search for Restaurants...."
+                        value={searchText}
+                        onChange={(e) => {
+                            setsearchText(e?.target?.value);
+                        }}
                     />
+
+                    <button
+                        className="absolute right-2 top-2 rounded-xl bg-white hover:bg-gray-100 w-12 h-10 sm:h-12 p-1"
+                        onClick={() => {
+                            const searchedRestaurant =
+                                restaurantList.filter((res) =>
+                                    res?.info?.name
+                                        .toLowerCase()
+                                        .includes(searchText.toLowerCase())
+                                );
+
+                            setfilteredResto(searchedRestaurant);
+                        }}
+                    >
+                        🔎︎
+                    </button>
+                </div>
+
+
+                {/* Filter Button */}
+
+                <button
+                    className="border-3 border-gray-300 rounded-xl p-2 w-full sm:w-[350px] lg:w-[400px] min-h-14 sm:min-h-16 bg-white text-base sm:text-xl text-gray-400 font-semibold"
+                    onClick={() => {
+                        const filteredList = restaurantList?.filter( (restoCard) => restoCard?.info?.avgRating > 4.2 );
+                        setfilteredResto(filteredList);
+                    }}
+                >
+                    Filter for Top Rated Restaurants
+                </button>
+
+
+                {/* User Input */}
+
+                <div className="flex items-center w-full sm:w-auto justify-center">
+
+                    <label className="font-bold text-gray-700 mr-2">
+                        USER:
+                    </label>
+
+                    <input
+                        className="border-3 border-gray-300 rounded-xl p-2 text-base sm:text-lg text-gray-700 font-semibold bg-white w-full sm:w-40"
+                        value={name}
+                        onChange={(e) =>
+                            setUserName(e.target.value)
+                        }
+                    />
+
                 </div>
 
             </div>
 
 
-            <div className="flex flex-wrap p-4 justify-center">
-            {filteredResto?.map((restaurant, index) => (
+            {/* Restaurant Cards */}
 
-               <Link to={"/restaurants/"+ restaurant?.info?.id }  key={restaurant?.info?.id} >
-            
-                     {
-                       restaurant?.info?.isOpen
-                        ? <ResturantWithOnlineStatus data={restaurant?.info}/>  //HOC
-                        : <RestaurantCard data={restaurant?.info} />
-                     }
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 p-4 ">
 
-                </Link>
-                
-            ))}
-           
+                {filteredResto?.map((restaurant) => (
+
+                    <Link
+                        to={"/restaurants/" + restaurant?.info?.id}
+                        key={restaurant?.info?.id}
+                        className="w-full max-w-sm"
+                    >
+
+                        {
+                            restaurant?.info?.isOpen
+                                ? <ResturantWithOnlineStatus data={restaurant?.info} />
+                                : <RestaurantCard data={restaurant?.info} />
+                        }
+
+                    </Link>
+
+                ))}
+
             </div>
 
-           
-
-             
         </div>
     );
 };

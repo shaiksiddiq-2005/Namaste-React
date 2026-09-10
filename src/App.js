@@ -6,6 +6,7 @@ import Body from "./components/Body";
 import { createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Cart from "./components/Cart";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu"; 
 import {lazy, Suspense} from "react";  // so that we can use Lasy ans Suspense, Lazy is is used to distribute the load which is on the main application and Suspense is used to show the content when the code is not available to display.
@@ -15,7 +16,6 @@ import {useState, useEffect} from "react";
 
 import "../index.css"; // To import the TailwindCss from the file index.css
 
-
 // import Instamart from "./components/Instamart";
 // import Grocerys from "./components/grocery";
 
@@ -24,12 +24,15 @@ const Grocery = lazy(()=> import("./components/Grocery"));
 
 import userDetails from "./utils/contextAPI"; // importing the context API from the utils folder to use it in the application.
 
-
+import { Provider } from "react-redux";
+import reduxStore from "./utils/reduxStore";
+ 
+ 
 
 
 const AppLayout = ()=> {
 
-// Provider example, it is used to override the default value of the context API and pass the value to the child components. The value passed to the provider will be available to all the child components of the provider. The value can be accessed using the useContext hook in the child components.
+// ContextAPI Provider example, it is used to override the default value of the context API and pass the value to the child components. The value passed to the provider will be available to all the child components of the provider. The value can be accessed using the useContext hook in the child components.
 const [UserName, setUserName] = useState(""); // using the useState hook to set the userName state and setUserName function to update the userName state.
 useEffect( ()=>{
         const data={ // Dummy object, to set the userName state to the data object which is created below.
@@ -43,7 +46,7 @@ useEffect( ()=>{
 
 
     return (
-        <div className="applayout">
+        <div className="applayout ">
 
        {/*  <userDetails.Provider value={{name: UserName}}> 
                 <Header/> //Owner name is --> Sid
@@ -59,22 +62,23 @@ useEffect( ()=>{
         */}
 
 
+
+        <Provider store={reduxStore}>
             <userDetails.Provider value={{name: UserName, setUserName}}> 
+            <div className="min-h-screen flex flex-col" >
             <Header/> 
-            <Outlet/>  
-            <Footer/> 
+            <main className="flex-1" >
+            <Outlet/> 
+            </main>
+            <Footer/>
+            </div>
             </userDetails.Provider> 
-            
+        </Provider>  
+        
 
         </div>
     );
 };
-
-
-
-
-
-
 
 
 
@@ -99,6 +103,11 @@ const appRouter = createBrowserRouter([
             {
                 path: "/contact",
                 element:<Contact />
+            },
+            {
+                path: "/cart",
+                element: <Cart/>
+
             },
             {
                 path:"/restaurants/:resId",
